@@ -1,0 +1,16 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<HEAD>
+	<TITLE>Login</TITLE>
+</HEAD>
+<BODY>
+	<H2>Login</H2>
+	<h:outputText value="#{loginBean.errorMsg}" rendered="#{loginBean.errorMsg != null}" style="color:red;"/>
+	<h:form>
+		User Name : <h:inputText id="userName" value="#{loginBean.userName}"/><br/>
+		Password : <h:inputSecret id="password" value="#{loginBean.password}"/><br/>
+		<h:commandButton value="submit" action="#{loginBean.Validate}"/>		
+	</h:form>
+</BODY>
+</HTML>
